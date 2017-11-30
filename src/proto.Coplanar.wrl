@@ -1,0 +1,14 @@
+#VRML V2.0 utf8
+
+PROTO Coplanar [
+	exposedField  MFNode  children  []
+]{
+	DrawGroup {
+		restoreOp TRUE
+		drawOp DrawOp {
+			op [0, 0, 1, 0]
+		}
+		sortAlphaInGroup TRUE
+		children IS children
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@wildpeaks/proto-coplanar",
+  "version": "1.0.0",
+  "description": "PROTO Coplanar",
+  "main": "src/proto.Coplanar.wrl",
+  "files": [
+    "src/proto.Coplanar.wrl"
+  ],
+  "repository": "https://github.com/wildpeaks/proto-coplanar",
+  "keywords": [
+    "wildpeaks",
+    "vrml"
+  ],
+  "author": "Cecile Muller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wildpeaks/proto-coplanar/issues"
+  },
+  "homepage": "https://github.com/wildpeaks/proto-coplanar#readme"
+}
