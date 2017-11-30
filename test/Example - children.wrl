@@ -1,0 +1,73 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO Coplanar [
+	exposedField  MFNode  children
+] "../src/proto.Coplanar.wrl#Coplanar"
+
+
+# Has z-fighting
+Transform {
+	translation 0 1.5 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 0 0
+					emissiveColor 1 0 0
+				}
+			}
+			geometry Rectangle {
+				size 2 0.5
+			}
+		}
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 0 0
+					emissiveColor 0 1 0
+				}
+			}
+			geometry Rectangle {
+				size 0.5 2
+			}
+		}
+	]
+}
+
+
+# No z-fighting, green is always in front
+Transform {
+	translation 0 -1.5 0
+	children Coplanar {
+		children [
+			Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 0 0 0
+						emissiveColor 1 0 0
+					}
+				}
+				geometry Rectangle {
+					size 2 0.5
+				}
+			}
+			Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 0 0 0
+						emissiveColor 0 1 0
+					}
+				}
+				geometry Rectangle {
+					size 0.5 2
+				}
+			}
+		]
+	}
+}
+
+
+Viewpoint {
+	position 0 0 6.5
+	description "Default"
+}
